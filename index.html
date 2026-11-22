@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Faculté des Sciences — Université M’hamed Bougara de Boumerdès. Découvrez nos départements et nos annonces.">
+  <meta name="theme-color" content="#F6F1E8">
+  <title>Faculté des Sciences — UMBB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+<div class="barre-service"><div class="conteneur"><span>Boumerdès, Algérie</span><a href="https://umbb.univ-boumerdes.dz/">Portail institutionnel <span aria-hidden="true">↗</span></a></div></div>
+<header class="entete">
+  <div class="conteneur entete-interne">
+    <a class="logo" href="#accueil" aria-label="UMBB — Accueil"><span class="logo-sigle">UMBB<span class="logo-trait"></span></span><span class="logo-nom">Faculté des Sciences<br>Université M’hamed Bougara</span></a>
+    <button type="button" class="bouton-menu" id="bouton-menu" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span class="ligne"></span><span class="ligne"></span></button>
+    <nav class="navigation" id="navigation" aria-label="Navigation principale"><ul>
+      <li><a href="#accueil">Accueil</a></li><li><a href="#faculte">La Faculté</a></li><li><a href="#departements">Départements</a></li><li><a href="#actualites">Actualités</a></li><li><a class="lien-admin" href="#administration">Administration <span aria-hidden="true">↗</span></a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="contenu">
+<div id="pages-publiques">
+  <section class="hero" id="accueil" aria-labelledby="titre-accueil">
+    <div class="conteneur hero-grille">
+      <div class="hero-texte">
+        <p class="surtitre">Université M’hamed Bougara de Boumerdès</p>
+        <h1 id="titre-accueil">Faculté des Sciences<br><em>Comprendre le monde.<br>Éclairer l’avenir.</em></h1>
+        <p class="introduction">Bienvenue à la Faculté des Sciences. Découvrez un espace d’apprentissage et de recherche où se rencontrent les sciences fondamentales, le numérique et les sciences du vivant.</p>
+        <div class="actions-hero"><a class="bouton bouton-plein" href="#departements">Explorer nos départements <span aria-hidden="true">↗</span></a><a class="lien-fleche" href="#faculte">Découvrir la Faculté <span aria-hidden="true">→</span></a></div>
+        <p class="signature">Apprendre. Comprendre. Transmettre.</p>
+      </div>
+      <figure class="photo-hero">
+        <!-- Photographie générique : remplacer src et alt ensemble lors de l’ajout d’une photo UMBB. -->
+        <img src="assets/library.jpg" alt="Rayonnages et espaces de lecture d’une bibliothèque, photographie illustrative" width="1400" height="933" fetchpriority="high">
+        <figcaption><span>Le goût du savoir</span><small>Bibliothèque · photographie illustrative</small></figcaption>
+      </figure>
+    </div>
+    <div class="conteneur reperes" aria-label="Explorer la Faculté">
+      <a href="#faculte"><span class="repere-label">L’institution</span><strong>La Faculté des Sciences</strong><span aria-hidden="true">→</span></a>
+      <a href="#departements"><span class="repere-label">Les disciplines</span><strong>Nos départements</strong><span aria-hidden="true">→</span></a>
+      <a href="#actualites"><span class="repere-label">L’information</span><strong>La vie de la Faculté</strong><span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+  <section class="section bande-ivoire" id="faculte" aria-labelledby="titre-faculte">
+    <div class="conteneur grille-apropos">
+      <div><p class="surtitre">La Faculté des Sciences</p><h2 id="titre-faculte">Des disciplines qui se rencontrent.<br><em>Des idées qui avancent.</em></h2><a class="lien-fleche" href="https://fs.univ-boumerdes.dz/">Consulter le portail de la Faculté <span aria-hidden="true">↗</span></a></div>
+      <div class="texte-editorial"><p>La Faculté des Sciences de l’Université M’hamed Bougara de Boumerdès est située au campus sud, à Boumerdès. Elle réunit des disciplines qui explorent la matière, le vivant, le numérique et les modèles mathématiques.</p><p>De l’informatique à la biologie, les départements offrent des regards complémentaires pour apprendre à observer, analyser et expérimenter.</p><div class="note-editoriale"><span class="surtitre">Notre communauté</span><p>Étudiantes, étudiants, enseignants et personnels : des parcours multiples, une même place accordée au savoir.</p></div></div>
+    </div>
+  </section>
+  <section class="section" id="departements" aria-labelledby="titre-departements">
+    <div class="conteneur"><header class="entete-section entete-partagee"><div><p class="surtitre">Faculté des Sciences · Campus sud</p><h2 id="titre-departements">Nos départements</h2></div><p class="chapo">Sept disciplines pour explorer les sciences, développer ses connaissances et construire son parcours.</p></header>
+      <div class="index-departements" id="liste-departements"></div>
+      <p class="source-composantes"><a href="https://fs.univ-boumerdes.dz/">Consulter le portail de la Faculté des Sciences <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </section>
+  <section class="section bande-ivoire" id="actualites" aria-labelledby="titre-actualites">
+    <div class="conteneur"><header class="entete-section entete-partagee"><div><p class="surtitre">Au fil de la Faculté</p><h2 id="titre-actualites">Actualités &amp; annonces</h2></div><p class="chapo">Les informations à suivre pour la scolarité, la recherche et la vie étudiante.</p></header><div class="journal" id="liste-actualites" aria-live="polite"></div></div>
+  </section>
+</div>
+<section class="section" id="connexion" aria-labelledby="titre-connexion" hidden>
+  <div class="conteneur connexion-grille">
+    <div class="connexion-editorial">
+      <a class="lien-fleche retour" href="#accueil">← Retour à l’accueil</a>
+      <p class="surtitre">Faculté des Sciences · Administration</p>
+      <h1 id="titre-connexion">Un espace dédié<br><em>à l’information.</em></h1>
+      <p class="introduction">Accédez à l’espace de gestion des annonces de la Faculté.</p>
+      <div class="note-editoriale"><span class="surtitre">La vie de la Faculté</span><p>Scolarité, recherche et vie étudiante : une information claire, au service de notre communauté.</p></div>
+    </div>
+    <div>
+      <form class="panneau formulaire-connexion" id="formulaire-connexion" novalidate>
+        <h2>Connexion administrateur</h2>
+        <p class="aide-connexion">Connectez-vous avec votre compte administrateur pour gérer les annonces de la Faculté.</p>
+        <div class="champ">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" autocomplete="username" maxlength="254" aria-describedby="erreur-email" required>
+          <p class="erreur" id="erreur-email"></p>
+        </div>
+        <div class="champ">
+          <label for="mot-de-passe">Mot de passe</label>
+          <input type="password" id="mot-de-passe" name="password" maxlength="1024" autocomplete="current-password" aria-describedby="erreur-mot-de-passe" required>
+          <p class="erreur" id="erreur-mot-de-passe"></p>
+        </div>
+        <button type="submit" class="bouton bouton-plein" id="bouton-connexion">Se connecter <span aria-hidden="true">→</span></button>
+        <p class="message-formulaire erreur" id="message-connexion" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="section" id="administration" aria-labelledby="titre-administration" hidden>
+  <div class="conteneur"><a class="lien-fleche retour" href="#accueil">← Retour à l’accueil</a><header class="entete-section"><div class="barre-administration"><p class="surtitre">Faculté des Sciences · Administration</p><button type="button" class="bouton bouton-contour" id="bouton-deconnexion">Déconnexion</button></div><h1 id="titre-administration">Les annonces de la Faculté</h1><p class="note-gestion" id="note-administration">Connectez-vous avec votre compte administrateur pour gérer les annonces.</p><p id="compteur-annonces" class="compteur"></p></header>
+  <div class="administration-grille">
+          <form class="panneau" id="formulaire-annonce" novalidate>
+            <h3 id="titre-formulaire">Ajouter une annonce</h3>
+
+            <div class="champ">
+              <label for="titre">Titre</label>
+              <input type="text" id="titre" name="titre" maxlength="140">
+              <p class="erreur" id="erreur-titre"></p>
+            </div>
+
+            <div class="champ">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date">
+              <p class="erreur" id="erreur-date"></p>
+            </div>
+
+            <div class="champ">
+              <label for="categorie">Catégorie</label>
+              <select id="categorie" name="categorie">
+                <option value="">Choisir une catégorie</option>
+                <option>Université</option>
+                <option>Scolarité</option>
+                <option>Recherche</option>
+                <option>Vie étudiante</option>
+              </select>
+              <p class="erreur" id="erreur-categorie"></p>
+            </div>
+
+            <div class="champ">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" maxlength="600"></textarea>
+              <p class="erreur" id="erreur-description"></p>
+            </div>
+
+            <div class="actions-formulaire">
+              <button type="submit" class="bouton bouton-plein" id="bouton-enregistrer">Publier l'annonce</button>
+              <button type="button" class="bouton bouton-contour" id="bouton-annuler" hidden>Annuler</button>
+            </div>
+            <p class="message-formulaire" id="message-formulaire" aria-live="polite"></p>
+          </form>
+
+          <div>
+            <h3 class="titre-liste">Annonces enregistrées</h3>
+            <button type="button" class="bouton-texte" id="bouton-actualiser-annonces" hidden>Actualiser les annonces</button>
+            <div id="liste-administration"></div>
+          </div>
+        </div>
+  </div>
+</section>
+<noscript><p class="conteneur note-gestion">Activez JavaScript pour consulter les départements, les annonces et l’espace de gestion. <a href="https://umbb.univ-boumerdes.dz/">Accéder au portail institutionnel</a>.</p></noscript>
+</main>
+<footer class="pied"><div class="conteneur pied-grille"><div><a class="logo-sigle" href="#accueil">UMBB</a><p>Faculté des Sciences<br>Université M’hamed Bougara de Boumerdès<br>Campus sud · Boumerdès, Algérie</p></div><div><p class="surtitre">Explorer</p><ul class="liens-pied"><li><a href="#faculte">La Faculté</a></li><li><a href="#departements">Nos départements</a></li><li><a href="#actualites">Actualités &amp; annonces</a></li></ul></div><div><p class="surtitre">Liens utiles</p><ul class="liens-pied"><li><a href="https://umbb.univ-boumerdes.dz/">Portail institutionnel ↗</a></li><li><a href="https://elearning.univ-boumerdes.dz/">Enseignement à distance ↗</a></li><li><a href="#administration">Administration</a></li></ul></div></div><div class="conteneur pied-bas"><span>Faculté des Sciences · Université M’hamed Bougara de Boumerdès</span><a href="#accueil">Retour en haut ↑</a></div></footer>
+</body></html>
