@@ -44,11 +44,19 @@ def cors_origins():
 
 # Middleware externe : les erreurs HTTP reçoivent elles aussi les en-têtes CORS.
 # Pas de cookies : fetch transmettra Authorization: Bearer <token>.
+ import logging
+
+logger = logging.getLogger(__name__)
+
+
 @app.exception_handler(DatabaseConfigurationError)
 @app.exception_handler(SQLAlchemyError)
 async def database_unavailable(request: Request, exception: Exception):
-    return JSONResponse(status_code=503, content={"detail": "Le service de données est momentanément indisponible."})
-
+    logger.exception("Erreur PostgreSQL")
+    return JSONResponse(
+        status_code=503,
+        content={"detail": "Le service de données est momentanément indisponible."}
+    )
 
 @app.exception_handler(AuthConfigurationError)
 async def auth_unavailable(request: Request, exception: Exception):
