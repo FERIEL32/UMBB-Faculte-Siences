@@ -3,6 +3,7 @@
 import os
 from typing import Annotated
 from urllib.parse import urlsplit
+import logging
 
 from fastapi import Depends, FastAPI, HTTPException, Path, Request, Response
 from fastapi.exceptions import RequestValidationError
@@ -20,7 +21,7 @@ from schemas import AnnonceRequest, LoginRequest, TokenResponse
 from security import hash_password, verify_password
 
 app = FastAPI()
-
+logger = logging.getLogger(__name__)
 
 def cors_origins():
     # Une origine contient seulement le protocole, l’hôte et le port éventuel.
@@ -44,11 +45,6 @@ def cors_origins():
 
 # Middleware externe : les erreurs HTTP reçoivent elles aussi les en-têtes CORS.
 # Pas de cookies : fetch transmettra Authorization: Bearer <token>.
- import logging
-
-logger = logging.getLogger(__name__)
-
-
 @app.exception_handler(DatabaseConfigurationError)
 @app.exception_handler(SQLAlchemyError)
 async def database_unavailable(request: Request, exception: Exception):
