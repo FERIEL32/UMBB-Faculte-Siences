@@ -3,8 +3,8 @@
   Le token reste uniquement en mémoire ; le mot de passe n’est jamais conservé.
 */
 
-// À adapter à l’adresse du serveur FastAPI de votre équipe (sans / final).
-var URL_FASTAPI = "http://127.0.0.1:8000";
+// À adapter à l’adresse du serveur FastAPI de votre équipe (sans / final)
+var URL_FASTAPI = "https://umbb-faculte-siences.onrender.com";
 var DELAI_API = 8000;
 
 var champsAnnonce = ["titre", "date", "categorie", "description"];
